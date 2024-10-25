@@ -24,13 +24,13 @@ function addTask(task, status = "unchecked") {
 
     const checkedTask = document.createElement('img');
     if (status == "unchecked") {
-        checkedTask.src = '../toDoList/checkbox-svgrepo-com.svg';
+        checkedTask.src = 'checkbox-svgrepo-com.svg';
     }
     else {
-        checkedTask.src = '../toDoList/checkbox-check-svgrepo-com.svg';
+        checkedTask.src = 'checkbox-check-svgrepo-com.svg';
     }
     const deleteTask = document.createElement('img');
-    deleteTask.src = '../toDoList/trash-bin-minimalistic-svgrepo-com.svg'
+    deleteTask.src = 'trash-bin-minimalistic-svgrepo-com.svg'
 
     let alldata = {
         "taskname": task,
@@ -39,8 +39,8 @@ function addTask(task, status = "unchecked") {
 
     checkedTask.addEventListener('click', () => {
         checkedTask.src = checkedTask.src.includes('checkbox-check-svgrepo-com.svg')
-            ? '../toDoList/checkbox-svgrepo-com.svg'
-            : '../toDoList/checkbox-check-svgrepo-com.svg';
+            ? 'checkbox-svgrepo-com.svg'
+            : 'checkbox-check-svgrepo-com.svg';
 
 
         alldata.status == "checked" ? alldata.status = "unchecked" : alldata.status = "checked";
