@@ -14,6 +14,7 @@ btn.addEventListener('click', (event) => {
 let serv = [];
 
 function addTask(task, status = "unchecked") {
+    task=task.trim();
     if (task == "") return;
     const item = document.createElement('li');
     item.classList.add(("todo-task"));
